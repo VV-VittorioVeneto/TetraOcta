@@ -1,6 +1,6 @@
 package com.vv.vvaddon.Feature;
 
-import com.vv.vvaddon.VVAddonConfig;
+import com.vv.vvaddon.Config.VVAddonConfig;
 
 import net.minecraft.world.entity.player.Player;
 

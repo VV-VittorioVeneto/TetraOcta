@@ -14,6 +14,10 @@
       "tetra:vvaddon/homology",
       "tetra:vvaddon/honor",
       "tetra:vvaddon/evil",
-      "tetra:vvaddon/hitaway"
+      "tetra:vvaddon/hitaway",
+      "tetra:vvaddon/exp_i",
+      "tetra:vvaddon/exp_ii",
+      "tetra:vvaddon/exp_iii",
+      "tetra:vvaddon/rush"
     ]
   }

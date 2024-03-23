@@ -1,21 +1,19 @@
 package com.vv.vvaddon.Feature;
 
-import com.vv.vvaddon.VVAddonConfig;
-import com.vv.vvaddon.VVAddonEffect.RE;
+import com.vv.vvaddon.Config.VVAddonConfig;
+import com.vv.vvaddon.Handler.VVAddonEventHandler;
 
 import net.minecraft.world.entity.player.Player;
 
 public class Combo {
-    public static RE execute(RE re , Player source){
-        int maxcombo = VVAddonConfig.Combo_max.get();
-        double bonus = VVAddonConfig.Combo_bonus.get();
-        if (source.getHealth() < re.health && VVAddonConfig.Combo_hurt.get()){
-            re.combo = 0;
-        }else{
-            re.combo=(re.combo<maxcombo)?re.combo+1:maxcombo;
+    public static float execute(Player player , float damage){
+        if(!VVAddonEventHandler.hashmap_combo.containsKey(player)){
+            int new_combo = 0;
+            VVAddonEventHandler.hashmap_combo.put(player, new_combo);
         };
-        re.damage *= 1 + re.combo * bonus;
-        re.health = source.getHealth();
-        return re;
+        int combo = VVAddonEventHandler.hashmap_combo.get(player);
+        damage *= 1 + combo * VVAddonConfig.Combo_bonus.get();
+        VVAddonEventHandler.hashmap_combo.replace(player, (combo < VVAddonConfig.Combo_max.get()) ? combo + 1 : VVAddonConfig.Combo_max.get());
+        return damage;
     }
 }

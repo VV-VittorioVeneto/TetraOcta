@@ -1,4 +1,6 @@
-package com.vv.vvaddon;
+package com.vv.vvaddon.Init;
+
+import com.vv.vvaddon.MainVVAddon;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -7,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 @SuppressWarnings("null")
-public class ModItems {
+public class VVAddonItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,MainVVAddon.MODID);
 
     public static final RegistryObject<Item> REFINE_IA = ITEMS.register("refine_ia",

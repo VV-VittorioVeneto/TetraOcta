@@ -1,4 +1,4 @@
-package com.vv.vvaddon;
+package com.vv.vvaddon.Config;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
@@ -35,6 +35,9 @@ public class VVAddonConfig {
         public static ForgeConfigSpec.BooleanValue Combo_hurt;
         public static ForgeConfigSpec.BooleanValue Honor_switch;
         public static ForgeConfigSpec.BooleanValue Evil_switch;
+        public static ForgeConfigSpec.DoubleValue Exp_bonus_1;
+        public static ForgeConfigSpec.DoubleValue Exp_bonus_2;
+        public static ForgeConfigSpec.DoubleValue Exp_bonus_3;
 
         static {
             builder.push("充能强化");
@@ -112,7 +115,7 @@ public class VVAddonConfig {
                     .defineInRange("段数", 5 ,1,100);
 
                 Combo_hurt = builder
-                    .comment("连击 特性是否因为受伤清零, true代表中止, 默认: true")
+                    .comment("连击 特性是否因为受伤清零, true代表清零, 默认: true")
                     .define("是/否", true);
 
             builder.pop();
@@ -172,7 +175,22 @@ public class VVAddonConfig {
                     .define("是/否", true);   
 
             builder.pop();
+    
+            builder.push("经验收割(只有最高等级生效)");
 
+                Exp_bonus_1 = builder
+                    .comment("经验收割一级 特性给予的经验增益, 0.2代表20%额外经验, 默认: 0.2")
+                    .defineInRange("一级增益", 0.2 , 0 , 10);
+
+                Exp_bonus_2 = builder
+                    .comment("经验收割二级 特性给予的经验增益, 0.5代表50%额外经验, 默认: 0.5")
+                    .defineInRange("二级增益", 0.5 , 0 , 10);
+
+                Exp_bonus_3 = builder
+                    .comment("经验收割三级 特性给予的经验增益, 1.0代表100%额外经验, 默认: 1.0")
+                    .defineInRange("三级增益", 1.0 , 0 , 10);   
+
+            builder.pop();
 
             spec = builder.build();
         }

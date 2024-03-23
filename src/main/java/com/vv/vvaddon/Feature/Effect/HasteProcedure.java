@@ -1,4 +1,4 @@
-package com.vv.vvaddon.Effect;
+package com.vv.vvaddon.Feature.Effect;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

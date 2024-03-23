@@ -24,11 +24,17 @@
         "vvaddon/charge": 0,
         "vvaddon/evil": 0,
         "vvaddon/honor": 0,
-        "vvaddon/homology": 0
+        "vvaddon/homology": 0,
+        "vvaddon/rush": 0,
+        "vvaddon/phantom_persuit": 0,
+        "vvaddon/phantom_rain": 0,
+        "vvaddon/exp_i": 0,
+        "vvaddon/exp_ii": 0,
+        "vvaddon/exp_iii": 0
     },
     "tints": {
-        "glyph": "FFD700",
-        "texture": "FFD700"
+        "glyph": "8A2BE2",
+        "texture": "8A2BE2"
     },
     "textures": [        
         "metal",

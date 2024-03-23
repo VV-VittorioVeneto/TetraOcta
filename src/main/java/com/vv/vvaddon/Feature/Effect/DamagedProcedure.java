@@ -1,4 +1,4 @@
-package com.vv.vvaddon.Effect;
+package com.vv.vvaddon.Feature.Effect;
 
 import net.minecraft.world.item.ItemStack;
 import se.mickelus.tetra.items.modular.ModularItem;
