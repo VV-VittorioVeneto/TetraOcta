@@ -1,6 +1,7 @@
-package com.vv.vvaddon.TestE;
+package com.vv.vvaddon.Feature;
 
 import com.vv.vvaddon.Entity.PhantomArrow;
+import com.vv.vvaddon.Init.VACoe;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -29,7 +30,7 @@ public class Phantom {
         return new BlockPos(vec);
     } 
 
-    public static void execute(ItemStack itemStack, Player player, Entity entity, int type) {
+    public static void execute(ItemStack itemStack, Player player, Entity entity, int type, double damage, int max) {
         Level level = player.getLevel();
         ItemStack ammoStack = new ItemStack(Items.ARROW);
         AbstractArrow abstractArrow = createArrow(player, itemStack, ammoStack);
@@ -42,13 +43,14 @@ public class Phantom {
                 k++;
             }
             if(k<4) return;
-            int maxArrows = 8;
+            int maxArrows = max;
             for(int j = 0; j < maxArrows; j++){
                 PhantomArrow phantomArrowEntity = new PhantomArrow(level, player);
                 if(type == 0)phantomArrowEntity.setPhantomArrowTick(0);
                 if(type == 1)phantomArrowEntity.setPhantomArrowTick(j);
                 if(type == 2)phantomArrowEntity.setPhantomArrowTick(j * 2);
                 phantomArrowEntity.setPhantomArrowImmu(true);
+                phantomArrowEntity.setPhantomArrowDamage((float)damage);
                 phantomArrowEntity.setPhantomArrowTrigger(false);
                 abstractArrow = phantomArrowEntity;
                 Vec3 vec3 = BP_to_Vec3(mutableSkyPos).add(level.random.nextFloat() * 16 - 8, level.random.nextFloat() * 4 - 2, level.random.nextFloat() * 16 - 8);
@@ -84,11 +86,11 @@ public class Phantom {
                 mutableSkyPos = mutableSkyPos.above();
                 k++;
             }
-            int maxArrows = 1;
-            for(int j = 0; j < maxArrows; j++){
+            for(int j = 0; j < VACoe.phantom_persuit_num; j++){
                 PhantomArrow phantomArrowEntity = new PhantomArrow(level , player);
                 phantomArrowEntity.setPhantomArrowTick(20);
                 phantomArrowEntity.setPhantomArrowImmu(true);
+                phantomArrowEntity.setPhantomArrowDamage((float)VACoe.phantom_persuit_damage);
                 phantomArrowEntity.setPhantomArrowTrigger(false);
                 abstractArrow = phantomArrowEntity;
                 Vec3 vec3 = BP_to_Vec3(mutableSkyPos).add(level.random.nextFloat() * 8 - 4, level.random.nextFloat() * 4 - 2, level.random.nextFloat() * 8 - 4);

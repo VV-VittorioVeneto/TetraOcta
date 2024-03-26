@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import com.vv.vvaddon.Config.VVAddonConfig;
 import com.vv.vvaddon.Handler.VVAddonEventHandler;
 import com.vv.vvaddon.Renderer.PhantomArrowRenderer;
+import com.vv.vvaddon.Init.VACoe;
 import com.vv.vvaddon.Init.VVAddonItemRegistry;
 
 import static com.vv.vvaddon.Init.VVAddonEntityRegistry.ENTITIES;
@@ -38,13 +39,14 @@ public class MainVVAddon
     
     public MainVVAddon()
     {
-        //MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new VVAddonEventHandler());
         modEventBus.addListener(this::entityRendererSetup);
         ITEMS.register(modEventBus);
         ENTITIES.register(modEventBus);
         SOUNDS.register(modEventBus);
         VVAddonConfig.setup();
+        new VACoe(); 
     }
     
     @SuppressWarnings("null")

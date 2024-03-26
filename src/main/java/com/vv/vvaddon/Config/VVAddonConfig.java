@@ -38,6 +38,15 @@ public class VVAddonConfig {
         public static ForgeConfigSpec.DoubleValue Exp_bonus_1;
         public static ForgeConfigSpec.DoubleValue Exp_bonus_2;
         public static ForgeConfigSpec.DoubleValue Exp_bonus_3;
+        public static ForgeConfigSpec.DoubleValue Phantom_persuit_damage;
+        public static ForgeConfigSpec.IntValue Phantom_persuit_num;
+        public static ForgeConfigSpec.IntValue Phantom_persuit_count;
+        public static ForgeConfigSpec.DoubleValue Phantom_rain_damage;
+        public static ForgeConfigSpec.IntValue Phantom_rain_num;
+        public static ForgeConfigSpec.DoubleValue Phantom_pr_damage;
+        public static ForgeConfigSpec.IntValue Phantom_pr_num;
+        public static ForgeConfigSpec.IntValue Phantom_pr_count;
+        public static ForgeConfigSpec.DoubleValue Rush_damage;
 
         static {
             builder.push("充能强化");
@@ -189,6 +198,58 @@ public class VVAddonConfig {
                 Exp_bonus_3 = builder
                     .comment("经验收割三级 特性给予的经验增益, 1.0代表100%额外经验, 默认: 1.0")
                     .defineInRange("三级增益", 1.0 , 0 , 10);   
+
+            builder.pop();
+    
+            builder.push("幻影侵袭");
+
+                Phantom_persuit_count = builder
+                    .comment("幻影侵袭 特性追加箭矢的轮次数, 5代表5轮箭矢, 默认: 5")
+                    .defineInRange("轮次数", 5 , 0 , 9);
+
+                Phantom_persuit_damage = builder
+                    .comment("幻影侵袭 特性追加箭矢的基础伤害, 8.0代表箭矢基础伤害为8.0, 默认: 8.0")
+                    .defineInRange("基础伤害", 8.0 , 0 , 32767);
+
+                Phantom_persuit_num = builder
+                    .comment("幻影侵袭 特性每轮追加箭矢的箭矢数, 1代表箭矢数为1, 默认: 1")
+                    .defineInRange("每轮箭矢数", 1 , 0 , 5);   
+
+            builder.pop();
+    
+            builder.push("幻影狂澜");
+
+                Phantom_pr_count = builder
+                    .comment("幻影狂澜 特性追加箭矢的轮次数, 3代表3轮箭矢, 默认: 3")
+                    .defineInRange("轮次数", 3 , 0 , 9);
+
+                Phantom_pr_damage = builder
+                    .comment("幻影狂澜 特性箭雨箭矢的基础伤害, 4.0代表箭矢基础伤害为4.0, 默认: 4.0")
+                    .defineInRange("基础伤害", 4.0 , 0 , 32767);
+
+                Phantom_pr_num = builder
+                    .comment("幻影狂澜 特性每轮箭雨的箭矢数, 8代表箭矢数为8, 默认: 8")
+                    .defineInRange("每轮箭矢数", 8 , 0 , 30);   
+
+            builder.pop();
+    
+            builder.push("幻影箭雨");
+
+                Phantom_rain_damage = builder
+                    .comment("幻影箭雨 特性箭雨箭矢的基础伤害, 5.0代表箭矢基础伤害为5.0, 默认: 5.0")
+                    .defineInRange("基础伤害", 5.0 , 0 , 32767);
+
+                Phantom_rain_num = builder
+                    .comment("幻影箭雨 特性每轮箭雨的箭矢数, 12代表箭矢数为12, 默认: 12")
+                    .defineInRange("每轮箭矢数", 12 , 0 , 30);   
+
+            builder.pop();
+    
+            builder.push("居合连斩");
+
+            Rush_damage = builder
+                    .comment("居合连斩 特性造成的伤害, 10.0代表基础伤害为10.0, 默认: 10.0")
+                    .defineInRange("基础伤害", 10.0 , 0 , 32767);
 
             builder.pop();
 

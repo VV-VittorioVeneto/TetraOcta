@@ -1,6 +1,6 @@
 package com.vv.vvaddon.Feature;
 
-import com.vv.vvaddon.Config.VVAddonConfig;
+import com.vv.vvaddon.Init.VACoe;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.Mob;
@@ -11,9 +11,9 @@ public class Exp {
         if(entity instanceof Mob mob){
             double reward = mob.getExperienceReward();
             switch (level) {
-                case 1:  reward *= VVAddonConfig.Exp_bonus_1.get();break;
-                case 2:  reward *= VVAddonConfig.Exp_bonus_2.get();break;
-                case 3:  reward *= VVAddonConfig.Exp_bonus_3.get();break;
+                case 1:  reward *= VACoe.exp_bonus_1;break;
+                case 2:  reward *= VACoe.exp_bonus_2;break;
+                case 3:  reward *= VACoe.exp_bonus_3;break;
                 default: reward *= 0;
             }
             player.giveExperiencePoints((int)Math.ceil(reward));

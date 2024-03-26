@@ -1,19 +1,20 @@
 package com.vv.vvaddon.Feature;
 
-import com.vv.vvaddon.Config.VVAddonConfig;
 import com.vv.vvaddon.Handler.VVAddonEventHandler;
+import com.vv.vvaddon.Init.VACoe;
 
 import net.minecraft.world.entity.player.Player;
 
 public class Combo {
-    public static float execute(Player player , float damage){
+    public static float execute(Player player){
+        float bonus = 0.0F;
         if(!VVAddonEventHandler.hashmap_combo.containsKey(player)){
             int new_combo = 0;
             VVAddonEventHandler.hashmap_combo.put(player, new_combo);
         };
         int combo = VVAddonEventHandler.hashmap_combo.get(player);
-        damage *= 1 + combo * VVAddonConfig.Combo_bonus.get();
-        VVAddonEventHandler.hashmap_combo.replace(player, (combo < VVAddonConfig.Combo_max.get()) ? combo + 1 : VVAddonConfig.Combo_max.get());
-        return damage;
+        bonus = combo * (float)VACoe.combo_bonus;
+        VVAddonEventHandler.hashmap_combo.replace(player, (combo < VACoe.combo_max) ? combo + 1 : VACoe.combo_max);
+        return bonus;
     }
 }

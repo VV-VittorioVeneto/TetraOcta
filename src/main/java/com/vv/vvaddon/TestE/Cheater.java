@@ -3,6 +3,7 @@ package com.vv.vvaddon.TestE;
 import java.util.Vector;
 
 import com.vv.vvaddon.Entity.PhantomArrow;
+import com.vv.vvaddon.Feature.Rush;
 
 import java.util.Iterator;
 

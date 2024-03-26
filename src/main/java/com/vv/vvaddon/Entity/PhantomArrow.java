@@ -15,6 +15,7 @@ import net.minecraft.world.phys.Vec3;
 
 @SuppressWarnings("null")
 public class PhantomArrow extends AbstractArrow{
+    private static final EntityDataAccessor<Float> PHANTOM_ARROW_DAMAGE = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Boolean> PHANTOM_ARROW_TRIGGER = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> PHANTOM_ARROW_IMMU = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> PHANTOM_ARROW_TICK = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.INT);
@@ -45,6 +46,7 @@ public class PhantomArrow extends AbstractArrow{
         super.defineSynchedData();
         this.entityData.define(PHANTOM_ARROW_IMMU, false);
         this.entityData.define(PHANTOM_ARROW_TICK, 10);
+        this.entityData.define(PHANTOM_ARROW_DAMAGE, 2.0F);
         this.entityData.define(PHANTOM_ARROW_TRIGGER, true);
     }
 
@@ -66,20 +68,27 @@ public class PhantomArrow extends AbstractArrow{
             this.setDeltaMovement(this.getDeltaMovement().scale(200F));
         }
         super.tick();
-        if (this.inGround || tickCount > getPhantomArrowTick() + 20) {
+        if (this.inGround || tickCount > getPhantomArrowTick() + 100) {
             this.discard();
         }
     }
 
     @Override
-    protected void onHitEntity(EntityHitResult raytraceResultIn) {
-
+    protected void onHitEntity(EntityHitResult entityHitResult) {
         Vec3 motion = getDeltaMovement();
-        super.onHitEntity(raytraceResultIn);
+        super.onHitEntity(entityHitResult);
         if (isAlive()) {
             setDeltaMovement(motion);
         }
+    }    
+    public float getPhantomArrowDamage() {
+        return this.entityData.get(PHANTOM_ARROW_DAMAGE);
     }
+
+    public void setPhantomArrowDamage(float f) {
+        this.entityData.set(PHANTOM_ARROW_DAMAGE, f);
+    }
+
 
     public boolean getPhantomArrowImmu(){
         return this.entityData.get(PHANTOM_ARROW_IMMU);

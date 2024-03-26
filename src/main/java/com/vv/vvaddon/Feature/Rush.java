@@ -1,6 +1,8 @@
-package com.vv.vvaddon.TestE;
+package com.vv.vvaddon.Feature;
 
 import static com.vv.vvaddon.Init.VVAddonSoundRegistry.KATANA_RUSH;
+
+import com.vv.vvaddon.Init.VACoe;
 
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -116,7 +118,7 @@ public class Rush {
         });
         player.level.getNearbyEntities(LivingEntity.class, targetingCondition, player, player.getBoundingBox().inflate(rush_dis)).forEach(entitynear ->{
             if(dis_to_trail_3(entitynear.getPosition(1.0F), ptrail) <= entitynear.getBbWidth() + 0.6){
-                entitynear.hurt(DamageSource.playerAttack(player) , 10);
+                entitynear.hurt(DamageSource.playerAttack(player) ,(float)VACoe.rush_damage);
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.vv.vvaddon.Feature.Effect;
+package com.vv.vvaddon.TestE;
 
 public class Dimensions {
     
