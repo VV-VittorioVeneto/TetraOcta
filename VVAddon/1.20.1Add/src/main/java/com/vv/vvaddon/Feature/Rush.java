@@ -8,7 +8,6 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.targeting.TargetingConditions;
 import net.minecraft.world.entity.player.Player;
@@ -44,9 +43,9 @@ public class Rush {
         if(!WorldIn.isClientSide()){
             damageEntities(player, hitPos);
         }else{
-            spawnTrailParticles(hitPos, WorldIn, player.getLevel());
+            spawnTrailParticles(hitPos, WorldIn, player.level());
         }
-        player.level.playSound(player, player, KATANA_RUSH.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+        player.level().playSound(player, player, KATANA_RUSH.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
         player.teleportTo(hitPos.trail_end.x, hitPos.trail_end.y, hitPos.trail_end.z);
     }
 
@@ -116,9 +115,9 @@ public class Rush {
         var targetingCondition = TargetingConditions.forCombat().ignoreLineOfSight().selector(e -> {
             return (true);
         });
-        player.level.getNearbyEntities(LivingEntity.class, targetingCondition, player, player.getBoundingBox().inflate(rush_dis)).forEach(entitynear ->{
+        player.level().getNearbyEntities(LivingEntity.class, targetingCondition, player, player.getBoundingBox().inflate(rush_dis)).forEach(entitynear ->{
             if(dis_to_trail_3(entitynear.getPosition(1.0F), ptrail) <= entitynear.getBbWidth() + 0.6){
-                entitynear.hurt(DamageSource.playerAttack(player) ,(float)VACoe.rush_damage);
+                entitynear.hurt(player.damageSources().playerAttack(player) ,(float)VACoe.rush_damage);
             }
         });
     }
@@ -129,7 +128,7 @@ public class Rush {
         ptrail.trail_begin = begin;
         ptrail.end_fold = 1;
         
-        ptrail.trail_fold1 = player.level.clip(new ClipContext(begin, begin.add(direction.scale(10)),
+        ptrail.trail_fold1 = player.level().clip(new ClipContext(begin, begin.add(direction.scale(10)),
         ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player)).getLocation();
         if(outh_dis(ptrail.trail_fold1, begin.add(direction.scale(10))) < 0.001){
             ptrail.trail_end = ptrail.trail_fold1;
@@ -139,7 +138,7 @@ public class Rush {
             if(Mth.abs((float)ptrail.trail_fold1.x) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold1.x) % 1 < 0.0001)direction = direction.multiply(-0.01,1,1);
             if(Mth.abs((float)ptrail.trail_fold1.y) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold1.y) % 1 < 0.0001)direction = direction.multiply(1,-0.01,1);
             if(Mth.abs((float)ptrail.trail_fold1.z) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold1.z) % 1 < 0.0001)direction = direction.multiply(1,1,-0.01);
-            ptrail.trail_fold2 = player.level.clip(new ClipContext(ptrail.trail_fold1, ptrail.trail_fold1.add(direction.scale(vec3_r)),
+            ptrail.trail_fold2 = player.level().clip(new ClipContext(ptrail.trail_fold1, ptrail.trail_fold1.add(direction.scale(vec3_r)),
             ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player)).getLocation();
             if(outh_dis(ptrail.trail_fold2, ptrail.trail_fold1.add(direction.scale(vec3_r))) < 0.001){
                 ptrail.trail_end = ptrail.trail_fold2;
@@ -149,7 +148,7 @@ public class Rush {
                 if(Mth.abs((float)ptrail.trail_fold2.x) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold2.x) % 1 < 0.0001)direction = direction.multiply(-0.01,1,1);
                 if(Mth.abs((float)ptrail.trail_fold2.y) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold2.y) % 1 < 0.0001)direction = direction.multiply(1,-0.01,1);
                 if(Mth.abs((float)ptrail.trail_fold2.z) % 1 > 0.9999 || Mth.abs((float)ptrail.trail_fold2.z) % 1 < 0.0001)direction = direction.multiply(1,1,-0.01);
-                ptrail.trail_fold3 = player.level.clip(new ClipContext(ptrail.trail_fold2, ptrail.trail_fold2.add(direction.scale(vec3_r)),
+                ptrail.trail_fold3 = player.level().clip(new ClipContext(ptrail.trail_fold2, ptrail.trail_fold2.add(direction.scale(vec3_r)),
                 ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player)).getLocation();
                 ptrail.trail_end = ptrail.trail_fold3;
             }

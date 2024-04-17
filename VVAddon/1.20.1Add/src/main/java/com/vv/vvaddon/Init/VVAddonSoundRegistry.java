@@ -13,7 +13,9 @@ public class VVAddonSoundRegistry {
 
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, MainVVAddon.MODID);
 
-    public static final RegistryObject<SoundEvent> KATANA_RUSH = SOUNDS.register("katana_rush", () -> (
-            new SoundEvent(new ResourceLocation(MainVVAddon.MODID, "katana_rush"))
-    ));
+    public static final RegistryObject<SoundEvent> KATANA_RUSH = registerSoundEvent("katana_rush");
+
+    private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
+        return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(MainVVAddon.MODID, name)));
+    }
 }

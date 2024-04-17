@@ -35,7 +35,7 @@ public class VVAddonEventHandler {
         if(event.phase.equals(Phase.END))return;
 
         final Player player = event.player;
-        final LevelAccessor WorldIn = player.level;
+        final LevelAccessor WorldIn = player.level();
         final ItemStack heldStack = ((LivingEntity) player).getMainHandItem();
         
         if (!WorldIn.isClientSide() && player.tickCount % 20 == 0){
@@ -71,7 +71,7 @@ public class VVAddonEventHandler {
     @SubscribeEvent
     public void onInteract(PlayerInteractEvent.RightClickItem event){
         final Player player = event.getEntity();
-        final LevelAccessor WorldIn = player.getLevel();
+        final LevelAccessor WorldIn = player.level();
         final ItemStack heldStack = player.getMainHandItem();
         
         if (heldStack.getItem() instanceof ModularItem item){
@@ -95,7 +95,7 @@ public class VVAddonEventHandler {
         pemap.drop(entity);
 
         if((source instanceof final Player player) && (entity != null)){
-            final LevelAccessor WorldIn = player.level;
+            final LevelAccessor WorldIn = player.level();
             final ItemStack heldStack = player.getMainHandItem();
             if (!WorldIn.isClientSide()){
                 if (heldStack.getItem() instanceof ModularItem item) { 
@@ -118,11 +118,11 @@ public class VVAddonEventHandler {
         final DamageSource damagesource = event.getSource();
         if((source instanceof final Player player) && (entity != null)){
             float final_damage = event.getAmount();
-            if(damagesource.isProjectile() && damagesource.getDirectEntity() instanceof PhantomArrow phantom_arrow){
+            if(damagesource.getDirectEntity() instanceof PhantomArrow phantom_arrow){
                 if(phantom_arrow.getPhantomArrowImmu())entity.invulnerableTime = 0;
                 final_damage = phantom_arrow.getPhantomArrowDamage();
             }
-            final LevelAccessor WorldIn = player.level;
+            final LevelAccessor WorldIn = player.level();
             final ItemStack heldStack = player.getMainHandItem();
             if (!WorldIn.isClientSide()){
                 if (heldStack.getItem() instanceof ModularItem item) { 
@@ -131,7 +131,7 @@ public class VVAddonEventHandler {
                     final int level_phantompersuit = item.getEffectLevel(heldStack, VAName.phantom_persuit);
 
                     if(level_hitaway > 0) HitAway.execute(player, entity);
-                    if(damagesource.isProjectile() && !(damagesource.getDirectEntity() instanceof PhantomArrow phantom_arrow && !phantom_arrow.getPhantomArrowTrigger())){
+                    if(!(damagesource.getDirectEntity() instanceof PhantomArrow phantom_arrow && !phantom_arrow.getPhantomArrowTrigger())){
                         if(level_phantomrain > 0 && level_phantompersuit == 0)Phantom.execute(heldStack, player ,entity, 0, VVAddonConfig.Phantom_rain_damage.get(), VVAddonConfig.Phantom_rain_num.get());
                         if(level_phantomrain == 0 && level_phantompersuit > 0)pemap.update(player, entity, VVAddonConfig.Phantom_persuit_count.get(), heldStack,1);
                         if(level_phantomrain > 0 && level_phantompersuit > 0)pemap.update(player, entity, VVAddonConfig.Phantom_pr_count.get(), heldStack,2);

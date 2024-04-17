@@ -29,7 +29,7 @@ public class Cheater {
     private static AbstractArrow createArrow(Player player, ItemStack bowStack, ItemStack ammoIn) {
         ItemStack ammo = ammoIn.isEmpty() ? player.getProjectile(bowStack) : ammoIn;
         ArrowItem arrowitem = (ArrowItem)(ammo.getItem() instanceof ArrowItem ? ammo.getItem() : Items.ARROW);
-        AbstractArrow abstractArrow =  arrowitem.createArrow(player.getLevel(), ammo, player);
+        AbstractArrow abstractArrow =  arrowitem.createArrow(player.level(), ammo, player);
         return abstractArrow;
     }
 
@@ -39,7 +39,7 @@ public class Cheater {
             var targetingCondition = TargetingConditions.forCombat().ignoreLineOfSight().selector(e -> {
                 return (true);
             });
-            player.level.getNearbyEntities(LivingEntity.class, targetingCondition, player, player.getBoundingBox().inflate(cheat_dis)).forEach(entitynear ->{
+            player.level().getNearbyEntities(LivingEntity.class, targetingCondition, player, player.getBoundingBox().inflate(cheat_dis)).forEach(entitynear ->{
                 entity_n.add(entitynear);
             });
         }

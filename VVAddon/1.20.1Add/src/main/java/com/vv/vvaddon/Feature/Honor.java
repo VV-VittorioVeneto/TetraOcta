@@ -10,7 +10,6 @@ import net.minecraft.world.item.ItemStack;
 import se.mickelus.tetra.items.modular.ModularItem;
 
 public class Honor {
-    @SuppressWarnings("null")
     public static void execute(Player player, ModularItem mitem, ItemStack item){
         int damage_left = mitem.getMaxDamage(item) - mitem.getDamage(item);
         if(damage_left < VACoe.honor_damage){

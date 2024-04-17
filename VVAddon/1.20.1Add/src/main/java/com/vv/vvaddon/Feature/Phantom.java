@@ -4,6 +4,7 @@ import com.vv.vvaddon.Entity.PhantomArrow;
 import com.vv.vvaddon.Init.VACoe;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -13,12 +14,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-@SuppressWarnings("null")
 public class Phantom {
     private static AbstractArrow createArrow(Player player, ItemStack bowStack, ItemStack ammoIn) {
         ItemStack ammo = ammoIn.isEmpty() ? player.getProjectile(bowStack) : ammoIn;
         ArrowItem arrowitem = (ArrowItem)(ammo.getItem() instanceof ArrowItem ? ammo.getItem() : Items.ARROW);
-        AbstractArrow abstractArrow =  arrowitem.createArrow(player.getLevel(), ammo, player);
+        AbstractArrow abstractArrow =  arrowitem.createArrow(player.level(), ammo, player);
         return abstractArrow;
     }
 
@@ -27,11 +27,12 @@ public class Phantom {
     } 
 
     private static BlockPos Vec3_to_BP(Vec3 vec){
-        return new BlockPos(vec);
+        Vec3i vec3i = new Vec3i((int)Math.round(vec.x),(int)Math.round(vec.y),(int)Math.round(vec.z)) ;
+        return new BlockPos(vec3i);
     } 
 
     public static void execute(ItemStack itemStack, Player player, Entity entity, int type, double damage, int max) {
-        Level level = player.getLevel();
+        Level level = player.level();
         ItemStack ammoStack = new ItemStack(Items.ARROW);
         AbstractArrow abstractArrow = createArrow(player, itemStack, ammoStack);
         if(abstractArrow != null){
@@ -76,7 +77,7 @@ public class Phantom {
     }
     
     public static void execute_effect(ItemStack itemStack, Player player, Entity entity) {
-        Level level = player.getLevel();
+        Level level = player.level();
         ItemStack ammoStack = new ItemStack(Items.ARROW);
         AbstractArrow abstractArrow = createArrow(player, itemStack, ammoStack);
         if(abstractArrow != null){
