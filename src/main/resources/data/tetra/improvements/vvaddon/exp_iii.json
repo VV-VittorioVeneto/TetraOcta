@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/exp_iii",
-      "effects": {
-        "vvaddon:exp_iii": 1
-      }
+  {
+    "key": "vvaddon/exp_iii",
+    "effects": {
+      "vvaddon:exp_iii": 1
     }
-  ]
+  }
+]

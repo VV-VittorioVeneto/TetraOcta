@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/combo",
-      "effects": {
-        "vvaddon:combo": 1
-      }
+  {
+    "key": "vvaddon/combo",
+    "effects": {
+      "vvaddon:combo": 1
     }
-  ]
+  }
+]

@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/strengtheffect",
-      "effects": {
-        "vvaddon:strengtheffect": 1
-      }
+  {
+    "key": "vvaddon/strengtheffect",
+    "effects": {
+      "vvaddon:strengtheffect": 1
     }
-  ]
+  }
+]

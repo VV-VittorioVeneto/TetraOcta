@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/nightvisioneffect",
-      "effects": {
-        "vvaddon:nightvisioneffect": 1
-      }
+  {
+    "key": "vvaddon/nightvisioneffect",
+    "effects": {
+      "vvaddon:nightvisioneffect": 1
     }
-  ]
+  }
+]

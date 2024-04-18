@@ -59,9 +59,9 @@ public class VACoe {
         phantom_pr_damage = VVAddonConfig.Phantom_pr_damage.get();
         phantom_rain_damage = VVAddonConfig.Phantom_rain_damage.get();
         rush_damage = VVAddonConfig.Rush_damage.get();
-        vampire_rate = 0.1;
-        vampire_chance = 0.1;
-        vampire_maxamount = 5;
+        vampire_rate = VVAddonConfig.Vampire_rate.get();
+        vampire_chance = VVAddonConfig.Vampire_chance.get();
+        vampire_maxamount = VVAddonConfig.Vampire_maxamount.get();
         
         evil_damage = VVAddonConfig.Evil_damage.get();
         honor_damage = VVAddonConfig.Honor_damage.get();

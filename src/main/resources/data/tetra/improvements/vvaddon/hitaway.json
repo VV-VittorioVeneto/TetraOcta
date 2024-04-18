@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/hitaway",
-      "effects": {
-        "vvaddon:hitaway": 1
-      }
+  {
+    "key": "vvaddon/hitaway",
+    "effects": {
+      "vvaddon:hitaway": 1
     }
-  ]
+  }
+]

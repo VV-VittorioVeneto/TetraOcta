@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/phantom_rain",
-      "effects": {
-        "vvaddon:phantom_rain": 1
-      }
+  {
+    "key": "vvaddon/phantom_rain",
+    "effects": {
+      "vvaddon:phantom_rain": 1
     }
-  ]
+  }
+]

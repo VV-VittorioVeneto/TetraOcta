@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/speedeffect",
-      "effects": {
-        "vvaddon:speedeffect": 1
-      }
+  {
+    "key": "vvaddon/speedeffect",
+    "effects": {
+      "vvaddon:speedeffect": 1
     }
-  ]
+  }
+]

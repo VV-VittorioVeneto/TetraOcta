@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/honor",
-      "effects": {
-        "vvaddon:honor": 1
-      }
+  {
+    "key": "vvaddon/honor",
+    "effects": {
+      "vvaddon:honor": 1
     }
-  ]
+  }
+]

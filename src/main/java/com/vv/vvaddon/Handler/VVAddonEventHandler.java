@@ -6,8 +6,8 @@ import com.vv.vvaddon.Config.VVAddonConfig;
 import com.vv.vvaddon.Entity.PhantomArrow;
 import com.vv.vvaddon.Feature.*;
 import com.vv.vvaddon.Init.VACoe;
-import com.vv.vvaddon.Init.VAName;
 import com.vv.vvaddon.Utils.PEMap;
+import com.vv.vvaddon.Init.VAName;
 import com.vv.vvaddon.Utils.PEMap.LeafNode;
 
 import net.minecraft.world.damagesource.DamageSource;

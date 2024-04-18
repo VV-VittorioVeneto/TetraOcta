@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/bloodlow",
-      "effects": {
-        "vvaddon:hasteeffect": 1
-      }
+  {
+    "key": "vvaddon/bloodlow",
+    "effects": {
+      "vvaddon:bloodlow": 1
     }
-  ]
+  }
+]

@@ -1,8 +1,8 @@
-package com.vv.vvaddon.Init;
+package com.vv.vvaddon.Utils;
 
 import se.mickelus.tetra.effect.ItemEffect;
 
-public class VAName {
+public class VANameMe {
     public static final ItemEffect nightvisioneffect = ItemEffect.get("vvaddon:nightvisioneffect");
     public static final ItemEffect hasteeffect = ItemEffect.get("vvaddon:hasteeffect");
     public static final ItemEffect speedeffect = ItemEffect.get("vvaddon:speedeffect");
@@ -13,7 +13,6 @@ public class VAName {
     public static final ItemEffect combo = ItemEffect.get("vvaddon:combo");
     public static final ItemEffect height = ItemEffect.get("vvaddon:height");
     public static final ItemEffect hitaway = ItemEffect.get("vvaddon:hitaway");
-    public static final ItemEffect sniper = ItemEffect.get("vvaddon:sniper");
     public static final ItemEffect homology = ItemEffect.get("vvaddon:homology");
     public static final ItemEffect honor = ItemEffect.get("vvaddon:honor");
     public static final ItemEffect evil = ItemEffect.get("vvaddon:evil");
@@ -21,10 +20,6 @@ public class VAName {
     public static final ItemEffect exp_ii = ItemEffect.get("vvaddon:exp_ii");
     public static final ItemEffect exp_iii = ItemEffect.get("vvaddon:exp_iii");
     public static final ItemEffect rush = ItemEffect.get("vvaddon:rush");
-    public static final ItemEffect phantom_rain = ItemEffect.get("vvaddon:phantom_rain");
-    public static final ItemEffect phantom_persuit = ItemEffect.get("vvaddon:phantom_persuit");
     public static final ItemEffect comfused = ItemEffect.get("vvaddon:comfused");
     public static final ItemEffect vampire = ItemEffect.get("vvaddon:vampire");
-
-    
 }

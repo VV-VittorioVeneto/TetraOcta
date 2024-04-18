@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/evil",
-      "effects": {
-        "vvaddon:evil": 1
-      }
+  {
+    "key": "vvaddon/evil",
+    "effects": {
+      "vvaddon:evil": 1
     }
-  ]
+  }
+]

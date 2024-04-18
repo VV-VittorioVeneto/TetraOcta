@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/sniper",
-      "effects": {
-        "vvaddon:sniper": 1
-      }
+  {
+    "key": "vvaddon/sniper",
+    "effects": {
+      "vvaddon:sniper": 1
     }
-  ]
+  }
+]

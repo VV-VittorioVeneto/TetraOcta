@@ -1,8 +1,8 @@
 [
-    {
-      "key": "vvaddon/rush",
-      "effects": {
-        "vvaddon:rush": 1
-      }
+  {
+    "key": "vvaddon/rush",
+    "effects": {
+      "vvaddon:rush": 1
     }
-  ]
+  }
+]

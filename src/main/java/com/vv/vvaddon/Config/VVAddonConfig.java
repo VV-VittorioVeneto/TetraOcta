@@ -47,6 +47,9 @@ public class VVAddonConfig {
         public static ForgeConfigSpec.IntValue Phantom_pr_num;
         public static ForgeConfigSpec.IntValue Phantom_pr_count;
         public static ForgeConfigSpec.DoubleValue Rush_damage;
+        public static ForgeConfigSpec.DoubleValue Vampire_rate;
+        public static ForgeConfigSpec.DoubleValue Vampire_chance;
+        public static ForgeConfigSpec.DoubleValue Vampire_maxamount;
 
         static {
             builder.push("充能强化");
@@ -247,8 +250,26 @@ public class VVAddonConfig {
     
             builder.push("居合连斩");
 
-            Rush_damage = builder
+                Rush_damage = builder
                     .comment("居合连斩 特性造成的伤害, 10.0代表基础伤害为10.0, 默认: 10.0")
+                    .defineInRange("基础伤害", 10.0 , 0 , 32767);
+
+            builder.pop();
+    
+            builder.push("吸血");
+
+                Vampire_rate = builder
+                    .comment("吸血 特性吸血的比率, 0.1代表吸血10%造成伤害, 默认: 0.1")
+                    .defineInRange("基础伤害", 0.1 , 0 , 1);
+
+            
+                Vampire_chance = builder
+                    .comment("吸血 特性每次判定生效的概率, 0.2代表有20%的概率生效, 默认: 0.2")
+                    .defineInRange("基础伤害", 0.2 , 0 , 1);
+
+                    
+                Vampire_maxamount = builder
+                    .comment("吸血 特性单次吸血最大值, 10.0代表最大值为10.0, 默认: 10.0")
                     .defineInRange("基础伤害", 10.0 , 0 , 32767);
 
             builder.pop();
