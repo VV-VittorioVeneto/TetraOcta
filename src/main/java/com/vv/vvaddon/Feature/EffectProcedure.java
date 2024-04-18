@@ -6,7 +6,6 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
-@SuppressWarnings("null")
 public class EffectProcedure {
    public static void execute(Entity entity, MobEffect effect, int time, int level) {
       if (entity != null && entity instanceof LivingEntity livingentity) {
@@ -44,11 +43,13 @@ public class EffectProcedure {
          livingentity.addEffect(new MobEffectInstance(str_to_eff(str), time, level));
       }
    }
+
    public static void execute(Entity entity, String str, int time) {
       if (entity != null && entity instanceof LivingEntity livingentity) {
          livingentity.addEffect(new MobEffectInstance(str_to_eff(str), time, 0));
       }
    }
+   
    public static void execute(Entity entity, String str) {
       if (entity != null && entity instanceof LivingEntity livingentity) {
          livingentity.addEffect(new MobEffectInstance(str_to_eff(str), 400, 0));

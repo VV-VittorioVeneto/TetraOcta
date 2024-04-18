@@ -13,7 +13,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 
-@SuppressWarnings("null")
 public class PhantomArrow extends AbstractArrow{
     private static final EntityDataAccessor<Float> PHANTOM_ARROW_DAMAGE = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Boolean> PHANTOM_ARROW_TRIGGER = SynchedEntityData.defineId(PhantomArrow.class, EntityDataSerializers.BOOLEAN);

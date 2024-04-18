@@ -20,7 +20,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import se.mickelus.tetra.items.modular.impl.bow.ModularBowItem;
 
-@SuppressWarnings("null")
 public class Cheater {
     private static Vector<Entity> entity_n = new Vector<>();
 

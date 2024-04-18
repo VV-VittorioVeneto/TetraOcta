@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
-@SuppressWarnings("null")
 public class PhantomPersuitMobEffect extends MobEffect{
 	public PhantomPersuitMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -6750055);

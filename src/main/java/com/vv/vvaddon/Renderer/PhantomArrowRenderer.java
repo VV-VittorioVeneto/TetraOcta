@@ -17,7 +17,6 @@ public class PhantomArrowRenderer extends ArrowRenderer<AbstractArrow>{
         super(ctx);
     }
 
-    @SuppressWarnings("null")
     @Override
     public ResourceLocation getTextureLocation(AbstractArrow entity) {
 

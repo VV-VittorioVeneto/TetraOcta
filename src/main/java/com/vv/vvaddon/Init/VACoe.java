@@ -21,7 +21,10 @@ public class VACoe {
     public static double phantom_persuit_damage;
     public static double phantom_rain_damage;
     public static double rush_damage;
-    
+    public static double vampire_rate;
+    public static double vampire_chance;
+    public static double vampire_maxamount;
+
     public static int evil_damage;
     public static int honor_damage;
     public static int combo_max;
@@ -56,6 +59,9 @@ public class VACoe {
         phantom_pr_damage = VVAddonConfig.Phantom_pr_damage.get();
         phantom_rain_damage = VVAddonConfig.Phantom_rain_damage.get();
         rush_damage = VVAddonConfig.Rush_damage.get();
+        vampire_rate = 0.1;
+        vampire_chance = 0.1;
+        vampire_maxamount = 5;
         
         evil_damage = VVAddonConfig.Evil_damage.get();
         honor_damage = VVAddonConfig.Honor_damage.get();

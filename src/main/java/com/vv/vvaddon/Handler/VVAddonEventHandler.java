@@ -131,6 +131,8 @@ public class VVAddonEventHandler {
                     final int level_phantompersuit = item.getEffectLevel(heldStack, VAName.phantom_persuit);
 
                     if(level_hitaway > 0) HitAway.execute(player, entity);
+                    if(level_hitaway > 0) Confuse.execute(player, entity);
+
                     if(!(damagesource.getDirectEntity() instanceof PhantomArrow phantom_arrow && !phantom_arrow.getPhantomArrowTrigger())){
                         if(level_phantomrain > 0 && level_phantompersuit == 0)Phantom.execute(heldStack, player ,entity, 0, VVAddonConfig.Phantom_rain_damage.get(), VVAddonConfig.Phantom_rain_num.get());
                         if(level_phantomrain == 0 && level_phantompersuit > 0)pemap.update(player, entity, VVAddonConfig.Phantom_persuit_count.get(), heldStack,1);
