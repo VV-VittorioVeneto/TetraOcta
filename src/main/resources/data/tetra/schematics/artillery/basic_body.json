@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [
+    "artillery/body"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 96,
+    "textureY": 48
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:metal/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "artillery/basic_body",
+      "moduleVariant": "basic_body/"
+    }
+  ]
+}

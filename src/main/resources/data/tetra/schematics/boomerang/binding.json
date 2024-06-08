@@ -1,0 +1,24 @@
+{
+  "replace": true,
+  "slots": [
+    "boomerang/binding"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "minor",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 40,
+    "textureY": 1
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:metal/",
+        "tetra:gem/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "boomerang/binding",
+      "moduleVariant": "binding/"
+    }
+  ]
+}

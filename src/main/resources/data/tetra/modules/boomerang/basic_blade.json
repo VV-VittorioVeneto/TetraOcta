@@ -1,0 +1,58 @@
+{
+  "replace": true,
+  "slots": [
+    "boomerang/blade"
+  ],
+  "type": "tetra:basic_major_module",
+  "renderLayer": "higher",
+  "improvements": [
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "key": "basic_blade/",
+      "integrity": -2,
+      "tools": {
+        "axe_dig": -2
+      },
+      "materials": [
+        "tetra:wood/",
+        "tetra:stone/",
+        "tetra:metal/",
+        "tetra:gem/",
+        "tetra:bone/"
+      ],
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_damage": 0.7
+        },
+        "secondaryAttributes": {
+          "octa:boomerang_time": 2.0,
+          "octa:boomerang_speed": -0.04
+        },
+        "tools": {
+          "axe_dig": [
+            1.0,
+            0.5
+          ]
+        },
+        "durability": 0.2,
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/octa_glyph.png",
+          "textureX": 0
+        },
+        "availableTextures": [
+          "metal",
+          "shiny",
+          "grainy",
+          "crude"
+        ],
+        "models": [
+          {
+            "location": "tetra:item/module/boomerang/blade/basic_blade/"
+          }
+        ]
+      }
+    }
+  ]
+}

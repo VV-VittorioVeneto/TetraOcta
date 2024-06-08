@@ -1,0 +1,20 @@
+[
+    {
+        "key": "artillery/safe_mode",
+        "steps": 1,
+        "properties": {
+            "effects": {
+                "octa:safe_mode": 1
+            }
+        }
+    },
+    {
+        "key": "artillery/window_switch",
+        "steps": 1,
+        "properties": {
+            "effects": {
+                "octa:window_switch": 1
+            }
+        }
+    }
+]

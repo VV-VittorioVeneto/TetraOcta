@@ -1,0 +1,43 @@
+{
+  "replace": true,
+  "slots": [
+    "longsingle/head"
+  ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "key": "basic_lance/",
+      "integrity": 6,
+      "attributes": {
+        "generic.attack_speed": -2.0,
+        "generic.attack_damage": 4.0
+      },
+      "materials": [
+        "tetra:stone/",
+        "tetra:metal/"
+      ],
+      "extract": {
+        "primaryAttributes": {
+          "generic.attack_speed": -0.05,
+          "generic.attack_damage": 1.1
+        },
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/octa_glyph.png",
+          "textureX": 0,
+          "textureY": 16
+        },
+        "availableTextures": [
+          "metal"
+        ],
+        "models": [
+          {
+            "location": "tetra:item/module/longsingle/head/basic_lance/"
+          }
+        ]
+      }
+    }
+  ]
+}

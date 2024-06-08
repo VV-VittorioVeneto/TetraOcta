@@ -1,0 +1,32 @@
+[
+    {
+        "variant": "rgb_window/",
+        "key": "artillery/R_value",
+        "steps": 255,
+        "properties": {
+            "effects": {
+                "octa:R_value": 1
+            }
+        }
+    },
+    {
+        "variant": "rgb_window/",
+        "key": "artillery/G_value",
+        "steps": 255,
+        "properties": {
+            "effects": {
+                "octa:G_value": 1
+            }
+        }
+    },
+    {
+        "variant": "rgb_window/",
+        "key": "artillery/B_value",
+        "steps": 255,
+        "properties": {
+            "effects": {
+                "octa:B_value": 1
+            }
+        }
+    }
+]

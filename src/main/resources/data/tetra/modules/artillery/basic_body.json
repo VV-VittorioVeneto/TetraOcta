@@ -1,0 +1,36 @@
+{
+  "replace": true,
+  "slots": [
+    "artillery/body"
+  ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "key": "basic_body/",
+      "durability": 240,
+      "integrity": 8,
+      "materials": [
+        "tetra:metal/"
+      ],
+      "extract": {
+        "durability": 0.56,
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/octa_glyph.png",
+          "textureX": 96,
+          "textureY": 48
+        },
+        "availableTextures": [
+          "metal"
+        ],
+        "models": [
+          {
+            "location": "tetra:item/module/artillery/body/basic_body/"
+          }
+        ]
+      }
+    }
+  ]
+}

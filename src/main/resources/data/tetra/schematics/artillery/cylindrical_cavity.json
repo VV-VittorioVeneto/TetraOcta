@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [
+    "artillery/cavity"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 80,
+    "textureY": 48
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:metal/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "artillery/cylindrical_cavity",
+      "moduleVariant": "cylindrical_cavity/"
+    }
+  ]
+}
