@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "improvements": [
+    "tetra:vvaddon/nightvisioneffect",
+    "tetra:vvaddon/speedeffect",
+    "tetra:vvaddon/height",
+    "tetra:vvaddon/hitaway",
+    "tetra:vvaddon/sniper",
+    "tetra:vvaddon/homology",
+    "tetra:vvaddon/phantom_rain",
+    "tetra:vvaddon/phantom_persuit",
+    "tetra:vvaddon/comfused"
+  ]
+}

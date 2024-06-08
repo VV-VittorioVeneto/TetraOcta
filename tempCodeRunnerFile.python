@@ -1,7 +1,0 @@
-while True:
-    key=input("a")
-    if int(key)>=1200:
-        print("1")
-    else:
-        print("2")
-    break
