@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "slots": [
+    "artillery/window"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "minor",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 48,
+    "textureY": 48,
+    "tint": "window_glyph"
+  },
+  "outcomes": [
+    {
+      "material": {
+        "items": [
+          "minecraft:glass_pane"
+        ],
+        "count": 1
+      },
+      "moduleKey": "artillery/hs_window",
+      "moduleVariant": "hs_window/"
+    }
+  ]
+}

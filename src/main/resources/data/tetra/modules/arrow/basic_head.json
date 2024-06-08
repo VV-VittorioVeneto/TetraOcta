@@ -1,0 +1,42 @@
+{
+  "replace": true,
+  "slots": [
+    "arrow/head"
+  ],
+  "type": "tetra:basic_major_module",
+  "improvements": [
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "key": "basic_head/",
+      "integrity": -2,
+      "attributes": {
+        "octa:arrow_damage": 1.0
+      },
+      "materials": [
+        "tetra:stone/",
+        "tetra:metal/",
+        "tetra:gem/"
+      ],
+      "extract": {
+        "primaryAttributes": {
+          "octa:arrow_damage": 0.2
+        },
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/octa_glyph.png",
+          "textureX": 0,
+          "textureY": 32
+        },
+        "availableTextures": [
+          "metal"
+        ],
+        "models": [
+          {
+            "location": "tetra:item/module/arrow/head/basic_head/"
+          }
+        ]
+      }
+    }
+  ]
+}

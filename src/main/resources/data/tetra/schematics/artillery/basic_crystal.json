@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [
+    "artillery/crystal"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 16,
+    "textureY": 48
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:gem/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "artillery/basic_crystal",
+      "moduleVariant": "basic_crystal/"
+    }
+  ]
+}

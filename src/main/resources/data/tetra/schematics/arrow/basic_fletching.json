@@ -1,0 +1,23 @@
+{
+  "replace": true,
+  "slots": [
+    "arrow/fletching"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 32,
+    "textureY": 32
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:fabric/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "arrow/basic_fletching",
+      "moduleVariant": "basic_fletching/"
+    }
+  ]
+}

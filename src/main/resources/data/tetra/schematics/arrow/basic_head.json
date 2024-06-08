@@ -1,0 +1,25 @@
+{
+  "replace": true,
+  "slots": [
+    "arrow/head"
+  ],
+  "materialSlotCount": 1,
+  "displayType": "major",
+  "glyph": {
+    "textureLocation": "tetra:textures/gui/octa_glyph.png",
+    "textureX": 0,
+    "textureY": 32
+  },
+  "outcomes": [
+    {
+      "materials": [
+        "tetra:stone/",
+        "tetra:metal/",
+        "tetra:gem/"
+      ],
+      "countFactor": 1,
+      "moduleKey": "arrow/basic_head",
+      "moduleVariant": "basic_head/"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "replace": true,
+  "slots": [
+    "boomerang/binding"
+  ],
+  "type": "tetra:basic_module",
+  "improvements": [
+    "tetra:shared/"
+  ],
+  "variants": [
+    {
+      "key": "binding/",
+      "integrity": -1,
+      "materials": [
+        "tetra:metal/",
+        "tetra:gem/"
+      ],
+      "extract": {
+        "secondaryAttributes": {
+          "octa:boomerang_time": 8.0,
+          "octa:boomerang_speed": -0.02
+        },
+        "glyph": {
+          "textureLocation": "tetra:textures/gui/octa_glyph.png",
+          "textureX": 40,
+          "textureY": 1
+        },
+        "availableTextures": [
+          "metal"
+        ],
+        "models": [
+          {
+            "location": "tetra:item/module/boomerang/binding/"
+          }
+        ]
+      }
+    }
+  ]
+}
